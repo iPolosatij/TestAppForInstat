@@ -55,7 +55,8 @@
             android:orientation="vertical"
             android:layout_marginLeft="10dp">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
+                android:id="@+id/video_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="5dp"/>
