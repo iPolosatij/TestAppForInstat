@@ -27,7 +27,7 @@ public class Adapter extends ArrayAdapter <VideoUrls> {
     }
     public Adapter(Context context, ArrayList<VideoUrls> values) {
         super(context, R.layout.video_model, values);
-        
+
         this.context = context;
         this.values = values;
     }
