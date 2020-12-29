@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestAppForInstat</string>
+    <string name="tournament">турнир</string>
+    <string name="date">дата</string>
+    <string name="team1">команда 1</string>
+    <string name="team2">команда 2</string>
+    <string name="video_name">название видео</string>
+    <string name="period">тайм</string>
+    <string name="quality">качество видео</string>
+    <string name="size_video">размер видео</string>
+</resources>
