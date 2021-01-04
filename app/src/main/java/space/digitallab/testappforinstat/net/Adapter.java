@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,12 +24,6 @@ public class Adapter extends ArrayAdapter <VideoUrls> {
         this.values = values;
 
     }
-    public Adapter(Context context, ArrayList<VideoUrls> values) {
-        super(context, R.layout.video_model, values);
-
-        this.context = context;
-        this.values = values;
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -46,14 +39,17 @@ public class Adapter extends ArrayAdapter <VideoUrls> {
         TextView period = (TextView) row.findViewById(R.id.period_value);
         TextView quality = (TextView) row.findViewById(R.id.quality_value);
         TextView videoSize = (TextView) row.findViewById(R.id.video_size_value);
+        TextView url = (TextView) row.findViewById(R.id.url);
+
 
 
         VideoUrls item = values.get(position);
 
-        videoName.setText(item.getName());
-        period.setText(item.getPeriod());
-        quality.setText(item.getQuality());
-        videoSize.setText(item.getSize());
+        videoName.setText("название - " + item.getName());
+        period.setText("тайм  - " + item.getPeriod());
+        quality.setText("качество - " + item.getQuality());
+        videoSize.setText("размер - " + item.getSize());
+        url.setText("" + item.getUrl());
 
         return row;
     }

@@ -10,13 +10,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:gravity="center"
             android:background="@drawable/model_shape">
 
             <TextView
@@ -24,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tournament"
+                android:gravity="center"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -31,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/date"
+                android:gravity="center"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -38,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/team1"
+                android:gravity="center"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -45,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/team2"
+                android:gravity="center"
                 android:textColor="@color/black"/>
         </LinearLayout>
 

@@ -34,7 +34,7 @@ public class VideoUrls {
     private Integer startMs;
     @SerializedName("checksum")
     @Expose
-    private Integer checksum;
+    private Double checksum;
     @SerializedName("size")
     @Expose
     private Integer size;
@@ -126,11 +126,11 @@ public class VideoUrls {
         this.startMs = startMs;
     }
 
-    public Integer getChecksum() {
+    public Double getChecksum() {
         return checksum;
     }
 
-    public void setChecksum(Integer checksum) {
+    public void setChecksum(Double checksum) {
         this.checksum = checksum;
     }
 
