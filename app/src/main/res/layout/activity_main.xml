@@ -63,9 +63,12 @@
 
             <ListView
                 android:id="@+id/video_list"
+                style="@android:style/Widget.ListView.Menu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:scrollbarThumbHorizontal="@drawable/model_shape"
+                android:scrollbarThumbVertical="@drawable/model_shape" />
 
         </LinearLayout>
 
