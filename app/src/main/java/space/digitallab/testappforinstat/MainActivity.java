@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -129,10 +130,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MatchInfo> call, Response<MatchInfo> response) {
                 matchInfo = response.body();
+                String[] subStr;
+                String delimeter = "T";
+                subStr = matchInfo.getDate().split(delimeter);
                 tournament.setText("" + matchInfo.getTournament().getNameEng());
-                date.setText("" + matchInfo.getDate());
-                team1.setText("" + matchInfo.getTeam1().getNameEng());
-                team2.setText("" + matchInfo.getTeam2().getNameEng());
+                date.setText("" + subStr[0] + "\n" + subStr[1]);
+                team1.setText("" + matchInfo.getTeam1().getNameEng() + " - " + matchInfo.getTeam1().getScore());
+                team2.setText("" + matchInfo.getTeam2().getNameEng() + " - " + matchInfo.getTeam2().getScore());
             }
 
             @Override

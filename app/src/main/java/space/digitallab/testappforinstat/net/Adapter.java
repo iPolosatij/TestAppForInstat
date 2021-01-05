@@ -6,8 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import space.digitallab.testappforinstat.R;
@@ -44,11 +42,13 @@ public class Adapter extends ArrayAdapter <VideoUrls> {
 
 
         VideoUrls item = values.get(position);
+        double d = item.getSize()/1048576;
+
 
         videoName.setText("название - " + item.getName());
         period.setText("тайм  - " + item.getPeriod());
         quality.setText("качество - " + item.getQuality());
-        videoSize.setText("размер - " + item.getSize());
+        videoSize.setText("размер - " + d + " mB");
         url.setText("" + item.getUrl());
 
         return row;
